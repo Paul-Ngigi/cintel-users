@@ -1,0 +1,16 @@
+<div class="py-16 px-8">
+  <form class="example-form">
+    <mat-form-field class="example-full-width">
+      <mat-label>Search</mat-label>
+      <input
+        matInput
+        placeholder="Search..."
+        [(ngModel)]="searchTerm"
+        (ngModelChange)="onSearchChange()"
+        name="searchTerm"
+      />
+    </mat-form-field>
+  </form>
+
+  <app-users-table [users]="filteredUsers"></app-users-table>
+</div>
